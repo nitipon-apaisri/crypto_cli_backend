@@ -1,11 +1,18 @@
 {
-  "name": "crypto_cli_backend",
-  "version": "1.0.0",
-  "description": "backend for crypto_cli",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+    "name": "crypto_cli_backend",
+    "version": "1.0.0",
+    "description": "backend for crypto_cli",
+    "main": "index.js",
+    "scripts": {
+        "test-ci": "mocha ./test/**/test*.js --parallel",
+        "test": "mocha ./test/**/test*.js --parallel --watch"
+    },
+    "type": "module",
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@babel/core": "^7.21.4",
+        "@babel/preset-env": "^7.21.4",
+        "chai": "^4.3.7"
+    }
 }
