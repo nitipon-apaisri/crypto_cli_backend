@@ -1,0 +1,26 @@
+{
+    "coins": [
+        {
+            "uuid": "Qwsogvtv82FCd",
+            "symbol": "BTC",
+            "name": "Bitcoin",
+            "color": "#f7931A",
+            "marketCap": "531453998996",
+            "price": "27651.57883611045",
+            "change": "-1.18",
+            "rank": 1,
+            "coinrankingUrl": "https://coinranking.com/coin/Qwsogvtv82FCd+bitcoin-btc"
+        },
+        {
+            "uuid": "razxDUgYGNAdQ",
+            "symbol": "ETH",
+            "name": "Ethereum",
+            "color": "#3C3C3D",
+            "marketCap": "229547272540",
+            "price": "1881.1350704614413",
+            "change": "-0.46",
+            "rank": 2,
+            "coinrankingUrl": "https://coinranking.com/coin/razxDUgYGNAdQ+ethereum-eth"
+        }
+    ]
+}
