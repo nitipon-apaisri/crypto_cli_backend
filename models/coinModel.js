@@ -4,7 +4,7 @@ const getCoins = async () => {
     //     method: "GET",
     //     headers: {
     //         "Content-Type": "application/json",
-    //         "x-access-token": "coinranking6aaf34d1a42ae12428bca25a34d777c0504f318c180d4237",
+    //         "x-access-token": "process.env.COINRANKING_API_KEY",
     //     },
     // });
     // const data = await res.json();
