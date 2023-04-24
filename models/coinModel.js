@@ -1,14 +1,12 @@
-const dummy_data = require("../data/dummy_data.json");
+const axios = require("axios");
 const getCoins = async () => {
-    const res = await fetch("https://api.coincap.io/v2/assets?limit=10", {
-        method: "GET",
+    const res = await axios.get("https://api.coincap.io/v2/assets?limit=10", {
         headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${process.env.COINCAP_API_KEY}`,
         },
     });
-    const data = await res.json();
-    return data;
+    return res.data;
 };
 
 module.exports = { getCoins };
