@@ -9,6 +9,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api", router.coinRouter);
 app.use(logger);
 app.use(express.json());
+app.get("/", (req, res) => {
+    res.send("Hello World!");
+});
 const run = () => {
     app.listen(PORT, () => console.log("Server running on port " + PORT));
 };
