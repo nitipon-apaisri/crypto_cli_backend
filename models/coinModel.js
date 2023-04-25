@@ -8,5 +8,14 @@ const getCoins = async () => {
     });
     return res.data;
 };
+const getCoinById = async (id) => {
+    const res = await axios.get(`https://api.coincap.io/v2/assets/${id}`, {
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${process.env.COINCAP_API_KEY}`,
+        },
+    });
+    return res.data;
+};
 
-module.exports = { getCoins };
+module.exports = { getCoins, getCoinById };
