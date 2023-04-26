@@ -5,9 +5,10 @@ describe("REST_API", () => {
     test("GET /api/coins", (done) => {
         request(app).get("/api/coins").expect(200, done);
     });
-});
-describe("REST_API", () => {
-    test("GET /api/coins/:id", (done) => {
+    test("GET /api/coin/:id", (done) => {
         request(app).get("/api/coins/bitcoin").expect(200, done);
+    });
+    test("GET /api/coins/:ids", (done) => {
+        request(app).get("/api/coins/bitcoin,ethereum").expect(200, done);
     });
 });

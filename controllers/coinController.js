@@ -1,4 +1,4 @@
-const { getCoins, getCoinById } = require("../models/coinModel");
+const { getCoins, getCoinById, getCoinByIds } = require("../models/coinModel");
 
 const fetchCoins = async (req, res) => {
     const data = await getCoins();
@@ -9,4 +9,9 @@ const fetchCoinById = async (req, res) => {
     const data = await getCoinById(id);
     res.json({ data: data });
 };
-module.exports = { fetchCoins, fetchCoinById };
+const fetchCoinByIds = async (req, res) => {
+    const ids = req.params.ids;
+    const data = await getCoinByIds(ids);
+    res.json({ data: data });
+};
+module.exports = { fetchCoins, fetchCoinById, fetchCoinByIds };
